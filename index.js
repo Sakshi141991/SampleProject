@@ -12,8 +12,8 @@ restService.use(bodyParser.urlencoded({
 restService.use(bodyParser.json());
 
 restService.post('/echo', function(req, res) {
-var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.date ? "Date is::"+req.body.result.parameters.date : "Seems like some problem. Speak again."
 
+var speech="Date is"+req.body.result.parameters.date 
  var speech=req.body.result.parameters.date 
     return res.json({
         speech: speech,
